@@ -23,6 +23,7 @@ if(isset($_POST['sub'])){
         echo " insert fail";
     }
 }
+
 ?>
 <meta charset="UTF-8">
 <form action="add.php" method="post">
