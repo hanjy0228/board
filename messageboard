@@ -1,0 +1,30 @@
+功能分析
+1.发表，修改，删除，搜索，列表，详情
+2.置顶，评论，点赞，私信
+3.登陆，注册
+4.转发，支付
+
+启动数据库mysql3306 关系型数据库 表和表的关联
+
+每一个表只能有一个主键，而且主键自动递增不为空，可以有多个外键，标语表之间的关联叫主外键关联
+Navicat连接数据库
+
+数据库-》表-》列-》值
+
+列名 数据类型 int char[8] varchar[8] data timestamp blod
+
+数据库建立（newblog）
+1：blog表（bid,title,content,time,hits-》hits默认0）
+
+
+操作数据库四大关键字：
+insert
+  insert into 表名（列名，列名....） values（值，值....）列名与值一一对应
+delete
+    delete from 表名 where bid=1
+update
+    update 表名 set 列名=值 where
+select
+    select * from 表名
+    select * from 表名 where
+    select title,content from 表名
