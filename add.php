@@ -11,11 +11,11 @@ if(isset($_POST['sub'])){
     $title=$_POST['title'];
     $con=$_POST['con'];
     //操作数据库插入数据
-    
+
     //拼字符串
     $sql="insert into blog(bid,title,content,time) values(null,'$title','$con',now())";
     //发送字符串
-    mysqli_query($link,$sql);
+    $query=mysqli_query($link,$sql);
     if($query){
        // echo " insert success";
         header("location:index.php");

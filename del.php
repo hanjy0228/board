@@ -10,7 +10,7 @@ if (isset($_GET['id'])){
     $id=$_GET['id'];
 
     $sql="delete from blog where bid='$id'";
-    mysqli_query($link,$sql);
+    $query=mysqli_query($link,$sql);
     if($query){
         echo "<script>alert('succcess')</script>";
         echo "<script>location='index.php'</script>";
