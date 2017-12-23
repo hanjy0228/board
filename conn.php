@@ -11,6 +11,6 @@
     //选择数据库
     @mysqli_select_db($link,'newblog') or die('select fail');
     //设置传输编码
-    mysqli_set_charset('UTF8');
+    mysqli_set_charset($link,'UTF8');
 
 ?>

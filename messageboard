@@ -31,3 +31,6 @@ select
 
 
 pl(pid,pcon,ptime,wid,uid) p1.wid=blog.bid pl.uid=user.uid
+
+
+分组
