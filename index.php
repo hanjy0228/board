@@ -3,6 +3,7 @@
         $id=$_COOKIE['uid'];
         echo $_COOKIE['uname']."have logined";
         echo "<a href='ulogin.php?id=$id'>ulogin</a>";
+        echo "<a href='box.php'>box</a>";
     }else{
         echo "<a href='login.php'>not login</a>";
     }
