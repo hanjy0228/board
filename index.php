@@ -45,6 +45,15 @@ while($rs=mysqli_fetch_array($query)) {
 
 <div id="div2">
     <ul>
-        <li>1</li>
+        <?php
+        $sql="select * from catalog";
+        $query=mysqli_query($link,$sql);
+//        mysqli_fetch_array($)
+        while($rows=mysqli_fetch_array($query)){
+
+
+        ?>
+        <a href="index.php?cid=<?php catalog_id?>"><li>echo<?php $rows['catalog_name']?></li></a>
+        <?php}?>
     </ul>
 </div>

@@ -28,3 +28,6 @@ select
     select * from 表名
     select * from 表名 where
     select title,content from 表名
+
+
+pl(pid,pcon,ptime,wid,uid) p1.wid=blog.bid pl.uid=user.uid

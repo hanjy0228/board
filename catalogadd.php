@@ -20,7 +20,7 @@ if(isset($_POST['sub'])){
             echo"success";
         }
         else{
-            echo"erro";
+            echo"error";
         }
     }
 }
