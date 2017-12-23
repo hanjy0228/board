@@ -35,7 +35,7 @@ while($rs=mysqli_fetch_array($query)) {
     ?>
     <h3><a href='all.php?id=<?php echo $rs['bid']?>'>标题:<?php echo $rs['title'];?></a>|<a href="del.php?id=<?php echo $rs['bid']?>">删除</a>|<a href="update.php?id=<?php echo $rs['bid']?>">修改</a></h3>
     <li>时间：<?php echo $rs['time'] ?></li>
-    <li>作者：<?php echo $rs['uname']?></li>
+    <li>作者：<a href="sx.php?uid=<?php echo $rs['uid']?>" ><?php echo $rs['uname']?>></a></li>
     <p><?php echo $rs['content'] ?></p>
     <hr>
     <?php
