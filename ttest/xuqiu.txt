@@ -1,0 +1,26 @@
+
+
+user(uid,uname,pass);
+blog(bid,title,content,time,hits,uid,catalog_id)
+catalog(catalog_id,catalog_name)
+
+select * from blog
+
+pl(pid,pcon,ptime,wid,uid)  pl.wid=blog.bid pl.uid=user.uid
+
+sx(xid,scon,stime,sid,rid,flag)
+
+分组  一组（组名 用户）
+user gid
+1     1
+2     2
+gf(gfid,gid,uid)
+	1    1   2
+	2    1   3
+	3    2   3 
+group  gid gname   uid
+        1    老单组        
+        2    老谢组
+        3    小吴组
+
+老单组（老谢 小吴）

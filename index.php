@@ -30,13 +30,19 @@
  * Time: 18:14
  */
 include "conn.php";
+if(isset($_GET['cid'])){
+    $cid=$_GET['cid'];
+    $sql="select * from user,blog,catalog where blog.uid=user'.uid' and catalog.catalog_id=blog.catalog_id and catalog.catalog_id='cid'";
+}else{
+    $sql="select * from blog,user where blog.uid =user.uid";
+}
 $sql="select * from blog,user where blog.uid=user.uid";
 $query=mysqli_query($link,$sql);
 while($rs=mysqli_fetch_array($query)) {
     ?>
     <h3><a href='all.php?id=<?php echo $rs['bid']?>'>标题:<?php echo $rs['title'];?></a>|<a href="del.php?id=<?php echo $rs['bid']?>">删除</a>|<a href="update.php?id=<?php echo $rs['bid']?>">修改</a></h3>
     <li>时间：<?php echo $rs['time'] ?></li>
-    <li>作者：<a href="sx.php?uid=<?php echo $rs['uid']?>" ><?php echo $rs['uname']?>></a></li>
+    <li>作者：<a href="sx.php?uid=<?php echo $rs['uid']?>" ><?php echo $rs['uname']?></a></li>
     <p><?php echo $rs['content'] ?></p>
     <hr>
     <?php
@@ -51,10 +57,11 @@ while($rs=mysqli_fetch_array($query)) {
         $query=mysqli_query($link,$sql);
 //        mysqli_fetch_array($)
         while($rows=mysqli_fetch_array($query)){
-
-
+            
         ?>
-        <a href="index.php?cid=<?php catalog_id?>"><li>echo<?php $rows['catalog_name']?></li></a>
-        <?php}?>
+        <a href="index.php?cid=<?php catalog_id?>"><li><?php echo  $rows['catalog_name']?></li></a>
+        <?php
+            }
+        ?>
     </ul>
 </div>
