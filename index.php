@@ -50,7 +50,6 @@ while($rs=mysqli_fetch_array($query)) {
 ?>
 </div>
 
-
 <div id="div2">
     <ul>
         <?php
