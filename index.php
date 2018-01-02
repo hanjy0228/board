@@ -57,7 +57,6 @@ while($rs=mysqli_fetch_array($query)) {
         $query=mysqli_query($link,$sql);
 //        mysqli_fetch_array($)
         while($rows=mysqli_fetch_array($query)){
-            
         ?>
         <a href="index.php?cid=<?php catalog_id?>"><li><?php echo  $rows['catalog_name']?></li></a>
         <?php
